@@ -7,7 +7,7 @@ import Productpage from './landingpage/products/productpage'
 import Pricepage from './landingpage/pricing/pricepage'
 import { createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Layout from './layout'
-import Notfound from './notfound'
+import Notfound from './Notfound'
 import {  Route } from 'react-router-dom'
 // const router = createBrowserRouter([
 //   {
