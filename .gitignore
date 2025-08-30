@@ -1,0 +1,17 @@
+# Node
+backend/node_modules
+frontend/node_modules
+Daeshboard/node_modules
+
+# Builds
+frontend/build
+Daeshboard/build
+backend/dist
+
+# Env files
+backend/.env
+frontend/.env
+Daeshboard/.env
+
+# Logs
+**/*.log

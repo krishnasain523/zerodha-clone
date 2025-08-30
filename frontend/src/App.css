@@ -1,0 +1,54 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+   <div className="flex w-full  justify-center items-center bg-white justify-between px-4 sm:px-8 md:px-10  h-[67px]">
+        <div><img className="w-[129px] h-[17px]" src="/images/logo.svg" alt="zerodha-logo" /></div>
+        <div>
+            <ul  className="flex gap-12">
+               <a href=""> <li>Signup</li></a>
+              <a href="">  <li>About</li></a>
+               <a href=""> <li>Products</li></a>
+                <a href=""><li>Pricing</li></a>
+                <a href=""><li>Support</li></a>
+            </ul>
+        </div>
+    </div>
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
