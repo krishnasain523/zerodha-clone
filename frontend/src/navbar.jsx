@@ -26,7 +26,11 @@ function Navbar() {
                 }>
                     Pricing
                 </NavLink>
-
+                 <NavLink to="https://zerodha-clone-jet.vercel.app" className={({ isActive }) =>
+                    isActive ? "text-blue-600 font-semibold" : "text-[#424242]"
+                }>
+                    kite
+                </NavLink>
 
                 {/* <a href="">Support</a> */}
             </div>
