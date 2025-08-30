@@ -26,6 +26,7 @@ axios.post("https://zerodha-backend-uy7a.onrender.com/order", {
 
   const handleCancelClick = () => {
   closeBuyWindow();
+   window.location.href = "/";
   };
 
   return (
