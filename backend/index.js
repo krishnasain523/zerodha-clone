@@ -34,7 +34,7 @@ app.get("/allorders",async(req,res)=>{
     let order=await orders.find({});
     res.send(order);
 })
-app.post("/neworder",async(req,res)=>{
+app.post("/order",async(req,res)=>{
     const {name,qty,price,mode}=req.body;
     const orderdata={
       name:name,
