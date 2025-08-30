@@ -6,7 +6,7 @@ import Orderlist from "./orderlist";
 const Orders = () => {
   const [allorders,setallorders]=useState([]);
  useEffect(()=>{
-   axios.get("http://localhost:3002/allorders").then((res)=>{
+   axios.get(" https://zerodha-backend-uy7a.onrender.com/allorders").then((res)=>{
     setallorders(res.data);
     
   })

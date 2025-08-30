@@ -10,7 +10,7 @@ import { data } from "react-router-dom";
 const Holdings = () => {
   const[allholdings,setallholdings]=useState([]);
   useEffect(()=>
-  { axios.get("http://localhost:3002/allholdings").then((res)=>
+  { axios.get(" https://zerodha-backend-uy7a.onrender.com/allholdings").then((res)=>
   {
      setallholdings(res.data);
   })
