@@ -27,7 +27,7 @@ const navigate = useNavigate();
 
   const handleCancelClick = () => {
   closeBuyWindow();
-    navigate("/");
+    navigate("https://zerodha-clone-jet.vercel.app/");
   };
 
   return (
