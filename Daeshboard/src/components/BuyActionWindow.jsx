@@ -12,12 +12,14 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 const closeBuyWindow=useContext(GeneralContext);
   const handleBuyClick = () => {
-    axios.post("https://zerodha-backend-uy7a.onrender.com/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "BUY",
-    });
+axios.post("https://zerodha-backend-uy7a.onrender.com/neworder", {
+  name: uid,
+  qty: stockQuantity,
+  price: stockPrice,
+  mode: "BUY",
+})
+.then(res => console.log("Order placed:", res.data))
+.catch(err => console.error("Error placing order:", err));
 
     GeneralContext.closeBuyWindow();
   };
