@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
@@ -23,10 +23,11 @@ axios.post("https://zerodha-backend-uy7a.onrender.com/order", {
 
     GeneralContext.closeBuyWindow();
   };
+const navigate = useNavigate();
 
   const handleCancelClick = () => {
   closeBuyWindow();
-   window.location.href = "/";
+    navigate("/");
   };
 
   return (
