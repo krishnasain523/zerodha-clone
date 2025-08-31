@@ -12,7 +12,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 const closeBuyWindow=useContext(GeneralContext);
   const handleBuyClick = () => {
-axios.post("https://zerodha-backend-uy7a.onrender.com/order", {
+axios.post("https://zerodha-backend-uy7a.onrender.com/neworder", {
   name: uid,
   qty: stockQuantity,
   price: stockPrice,
@@ -23,11 +23,9 @@ axios.post("https://zerodha-backend-uy7a.onrender.com/order", {
 
     GeneralContext.closeBuyWindow();
   };
-const navigate = useNavigate();
 
   const handleCancelClick = () => {
   closeBuyWindow();
-    navigate("https://zerodha-clone-jet.vercel.app/");
   };
 
   return (
