@@ -12,7 +12,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 const closeBuyWindow=useContext(GeneralContext);
   const handleBuyClick = (e) => {
-
+   e.preventDefault(); 
 axios.post("https://zerodha-backend-uy7a.onrender.com/neworder", {
   name: uid,
   qty: stockQuantity,
@@ -22,7 +22,7 @@ axios.post("https://zerodha-backend-uy7a.onrender.com/neworder", {
 .then(res => console.log("Order placed:", res.data))
 .catch(err => console.error("Error placing order:", err));
 
-    GeneralContext.closeBuyWindow();
+  closeBuyWindow();
   };
 
 
@@ -61,9 +61,9 @@ axios.post("https://zerodha-backend-uy7a.onrender.com/neworder", {
       <div className="buttons">
         <span>Margin required ₹140.65</span>
         <div>
-          <Link className="btn btn-blue" onClick={handleBuyClick}>
+          <button className="btn btn-blue" onClick={handleBuyClick}>
             Buy
-          </Link>
+          </button>
           <Link to="" className="btn btn-grey" onClick={handleCancelClick}>
             Cancel
           </Link>
