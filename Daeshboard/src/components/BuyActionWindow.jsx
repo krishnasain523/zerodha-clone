@@ -22,7 +22,7 @@ axios.post("https://zerodha-backend-uy7a.onrender.com/neworder", {
 .then(res => console.log("Order placed:", res.data))
 .catch(err => console.error("Error placing order:", err));
 
-  closeBuyWindow();
+  handleCancelClick();
   };
 
 
