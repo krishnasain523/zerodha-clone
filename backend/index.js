@@ -37,18 +37,20 @@ app.get("/allorders",async(req,res)=>{
     let order=await orders.find({});
     res.send(order);
 })
-app.post("/neworder",async(req,res)=>{
-    const {name,qty,price,mode}=req.body;
-    const orderdata={
-      name:name,
-      qty:qty,
-      price:price,
-      mode:mode,
-    };
-    // await orders.deleteMany({});
-    await orders.insertMany(orderdata);
-    console.log("order placed sucess");
-})
+app.post("/neworder", async (req, res) => {
+  try {
+    const { name, qty, price, mode } = req.body;
+    const orderdata = { name, qty, price, mode };
+
+    const newOrder = await orders.create(orderdata);
+
+    console.log("order placed success");
+    res.status(201).json(newOrder); // send response back
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Something went wrong" });
+  }
+});
 mongoose.connect(url)
   .then(() => {
     console.log("db connected");
