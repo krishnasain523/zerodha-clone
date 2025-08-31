@@ -46,7 +46,7 @@ app.post("/neworder",async(req,res)=>{
       mode:mode,
     };
     // await orders.deleteMany({});
-    await orders.insertOne(orderdata);
+    await orders.insertMany(orderdata);
     console.log("order placed sucess");
 })
 mongoose.connect(url)
