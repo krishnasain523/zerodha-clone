@@ -11,7 +11,10 @@ const PORT=process.env.PORT||3002;
 const cors=require("cors");
 app.use(express.json()); // parse JSON
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: "https://zerodha-clone-jet.vercel.app/",  // or put your frontend URL instead of "*"
+  methods: ["GET", "POST"],
+}));
 app.get("/addsampledata",async(req,res)=>
 {
    await Holding.deleteMany({});
