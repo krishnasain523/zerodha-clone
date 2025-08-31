@@ -12,8 +12,9 @@ const cors=require("cors");
 app.use(express.json()); // parse JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: "*",  // or put your frontend URL instead of "*"
+  origin: "https://zerodha-clone-jet.vercel.app/",  // or put your frontend URL instead of "*"
   methods: ["GET", "POST"],
+    credentials: true,
 }));
 app.get("/addsampledata",async(req,res)=>
 {
