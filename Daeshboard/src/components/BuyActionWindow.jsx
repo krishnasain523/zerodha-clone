@@ -12,7 +12,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 const closeBuyWindow=useContext(GeneralContext);
   const handleBuyClick = (e) => {
-      e.preventDefault();
+
 axios.post("https://zerodha-backend-uy7a.onrender.com/neworder", {
   name: uid,
   qty: stockQuantity,
