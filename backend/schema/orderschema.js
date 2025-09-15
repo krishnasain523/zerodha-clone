@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, default: mongoose } = require("mongoose");
 
 const orderschema=new Schema(
     {
@@ -6,6 +6,10 @@ const orderschema=new Schema(
     qty: Number,
     price: Number,
     mode:String,
+    cretedby:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"user"
+    }
     }
 )
 module.exports=orderschema;
